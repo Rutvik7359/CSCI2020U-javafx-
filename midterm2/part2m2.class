@@ -1,0 +1,167 @@
+<<<<<<< HEAD
+import java.io.File;
+import java.util.Scanner;
+
+public class part2m2{
+    public part2m2() {
+    }
+
+    public static void main(String[] var0) throws Exception {
+        if (var0.length != 1) {
+            System.out.println("Usage: java filename");
+            System.exit(1);
+        }
+
+        File var1 = new File(var0[0]);
+        if (!var1.exists()) {
+            System.out.println("File " + var0[0] + " does not exist");
+            System.exit(2);
+        }
+
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        Scanner var5 = new Scanner(var1);
+        Throwable var6 = null;
+
+        String var7;
+        try {
+            while(var5.hasNext()) {
+                ++var4;
+                var7 = var5.nextLine();
+                var2 += var7.length();
+            }
+        } catch (Throwable var31) {
+            var6 = var31;
+            throw var31;
+        } finally {
+            if (var5 != null) {
+                if (var6 != null) {
+                    try {
+                        var5.close();
+                    } catch (Throwable var28) {
+                        var6.addSuppressed(var28);
+                    }
+                } else {
+                    var5.close();
+                }
+            }
+
+        }
+
+        var5 = new Scanner(var1);
+        var6 = null;
+
+        try {
+            while(var5.hasNext()) {
+                var7 = var5.next();
+                ++var3;
+            }
+        } catch (Throwable var29) {
+            var6 = var29;
+            throw var29;
+        } finally {
+            if (var5 != null) {
+                if (var6 != null) {
+                    try {
+                        var5.close();
+                    } catch (Throwable var27) {
+                        var6.addSuppressed(var27);
+                    }
+                } else {
+                    var5.close();
+                }
+            }
+
+        }
+
+        System.out.println("File " + var1.getName() + " has");
+        System.out.println(var2 + " characters");
+        System.out.println(var3 + " words");
+        System.out.println(var4 + " lines");
+    }
+}
+=======
+import java.io.File;
+import java.util.Scanner;
+
+public class part2m2{
+    public part2m2() {
+    }
+
+    public static void main(String[] var0) throws Exception {
+        if (var0.length != 1) {
+            System.out.println("Usage: java filename");
+            System.exit(1);
+        }
+
+        File var1 = new File(var0[0]);
+        if (!var1.exists()) {
+            System.out.println("File " + var0[0] + " does not exist");
+            System.exit(2);
+        }
+
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        Scanner var5 = new Scanner(var1);
+        Throwable var6 = null;
+
+        String var7;
+        try {
+            while(var5.hasNext()) {
+                ++var4;
+                var7 = var5.nextLine();
+                var2 += var7.length();
+            }
+        } catch (Throwable var31) {
+            var6 = var31;
+            throw var31;
+        } finally {
+            if (var5 != null) {
+                if (var6 != null) {
+                    try {
+                        var5.close();
+                    } catch (Throwable var28) {
+                        var6.addSuppressed(var28);
+                    }
+                } else {
+                    var5.close();
+                }
+            }
+
+        }
+
+        var5 = new Scanner(var1);
+        var6 = null;
+
+        try {
+            while(var5.hasNext()) {
+                var7 = var5.next();
+                ++var3;
+            }
+        } catch (Throwable var29) {
+            var6 = var29;
+            throw var29;
+        } finally {
+            if (var5 != null) {
+                if (var6 != null) {
+                    try {
+                        var5.close();
+                    } catch (Throwable var27) {
+                        var6.addSuppressed(var27);
+                    }
+                } else {
+                    var5.close();
+                }
+            }
+
+        }
+
+        System.out.println("File " + var1.getName() + " has");
+        System.out.println(var2 + " characters");
+        System.out.println(var3 + " words");
+        System.out.println(var4 + " lines");
+    }
+}
+>>>>>>> 6e22061cf32aaedcc0260e23f23e85e766b18a94
